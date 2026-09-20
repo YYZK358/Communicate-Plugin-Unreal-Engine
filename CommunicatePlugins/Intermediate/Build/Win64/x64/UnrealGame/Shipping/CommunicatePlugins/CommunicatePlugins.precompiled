@@ -1,0 +1,7 @@
+{
+	"OutputFiles": [
+		"Module.CommunicatePlugins.cpp.obj",
+		"CommunicateComponent.cpp.obj",
+		"CommunicatePlugins.cpp.obj"
+	]
+}
