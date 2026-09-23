@@ -18,7 +18,9 @@ COMMUNICATEPLUGINS_API UScriptStruct* Z_Construct_UScriptStruct_FCommunicateTabl
 COMMUNICATEPLUGINS_API UScriptStruct* Z_Construct_UScriptStruct_FSelectCommunicateTableRow();
 ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 ENGINE_API UClass* Z_Construct_UClass_UDataTable_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTableRowBase();
+LEVELSEQUENCE_API UClass* Z_Construct_UClass_ULevelSequence_NoRegister();
 UPackage* Z_Construct_UPackage__Script_CommunicatePlugins();
 // ********** End Cross Module References **********************************************************
 
@@ -133,6 +135,18 @@ struct Z_Construct_UScriptStruct_FCommunicateTableRow_Statics
 		{ "ModuleRelativePath", "Public/CommunicateComponent.h" },
 		{ "ToolTip", "\xe5\xaf\xb9\xe8\xaf\x9d\xe5\x86\x85\xe5\xae\xb9" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Sound_MetaData[] = {
+		{ "Category", "CommunicatePlugins" },
+		{ "Comment", "//\xe5\xaf\xb9\xe8\xaf\x9d\xe9\x9f\xb3\xe9\xa2\x91\n" },
+		{ "ModuleRelativePath", "Public/CommunicateComponent.h" },
+		{ "ToolTip", "\xe5\xaf\xb9\xe8\xaf\x9d\xe9\x9f\xb3\xe9\xa2\x91" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Sequence_MetaData[] = {
+		{ "Category", "CommunicatePlugins" },
+		{ "Comment", "//\xe8\xbf\x87\xe5\x9c\xba\xe5\x8a\xa8\xe7\x94\xbb\n" },
+		{ "ModuleRelativePath", "Public/CommunicateComponent.h" },
+		{ "ToolTip", "\xe8\xbf\x87\xe5\x9c\xba\xe5\x8a\xa8\xe7\x94\xbb" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HaveSelect_MetaData[] = {
 		{ "Category", "CommunicatePlugins" },
 		{ "Comment", "//\xe6\x98\xaf\xe5\x90\xa6\xe5\x8c\x85\xe5\x90\xab\xe9\x80\x89\xe6\x8b\xa9\n" },
@@ -156,6 +170,8 @@ struct Z_Construct_UScriptStruct_FCommunicateTableRow_Statics
 // ********** Begin ScriptStruct FCommunicateTableRow constinit property declarations **************
 	static const UECodeGen_Private::FNamePropertyParams NewProp_Name;
 	static const UECodeGen_Private::FTextPropertyParams NewProp_ContentText;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Sound;
+	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_Sequence;
 	static void NewProp_HaveSelect_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_HaveSelect;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Select_Inner;
@@ -184,6 +200,8 @@ class UScriptStruct* FCommunicateTableRow::StaticStruct()
 // ********** Begin ScriptStruct FCommunicateTableRow Property Definitions *************************
 const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FCommunicateTableRow_Statics::NewProp_Name = { "Name", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FCommunicateTableRow, Name), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Name_MetaData), NewProp_Name_MetaData) };
 const UECodeGen_Private::FTextPropertyParams Z_Construct_UScriptStruct_FCommunicateTableRow_Statics::NewProp_ContentText = { "ContentText", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FCommunicateTableRow, ContentText), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ContentText_MetaData), NewProp_ContentText_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FCommunicateTableRow_Statics::NewProp_Sound = { "Sound", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FCommunicateTableRow, Sound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Sound_MetaData), NewProp_Sound_MetaData) };
+const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FCommunicateTableRow_Statics::NewProp_Sequence = { "Sequence", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FCommunicateTableRow, Sequence), Z_Construct_UClass_ULevelSequence_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Sequence_MetaData), NewProp_Sequence_MetaData) };
 void Z_Construct_UScriptStruct_FCommunicateTableRow_Statics::NewProp_HaveSelect_SetBit(void* Obj)
 {
 	((FCommunicateTableRow*)Obj)->HaveSelect = 1;
@@ -199,6 +217,8 @@ const UECodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FCommunic
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FCommunicateTableRow_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCommunicateTableRow_Statics::NewProp_Name,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCommunicateTableRow_Statics::NewProp_ContentText,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCommunicateTableRow_Statics::NewProp_Sound,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCommunicateTableRow_Statics::NewProp_Sequence,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCommunicateTableRow_Statics::NewProp_HaveSelect,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCommunicateTableRow_Statics::NewProp_Select_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCommunicateTableRow_Statics::NewProp_Select,
@@ -253,7 +273,7 @@ struct Z_Construct_UFunction_UCommunicateComponent_GetCommunicate_Statics
 };
 
 // ********** Begin Function GetCommunicate Property Definitions ***********************************
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UCommunicateComponent_GetCommunicate_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CommunicateComponent_eventGetCommunicate_Parms, ReturnValue), Z_Construct_UScriptStruct_FCommunicateTableRow, METADATA_PARAMS(0, nullptr) }; // 3510658035
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UCommunicateComponent_GetCommunicate_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CommunicateComponent_eventGetCommunicate_Parms, ReturnValue), Z_Construct_UScriptStruct_FCommunicateTableRow, METADATA_PARAMS(0, nullptr) }; // 24681567
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UCommunicateComponent_GetCommunicate_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UCommunicateComponent_GetCommunicate_Statics::NewProp_ReturnValue,
 };
@@ -309,7 +329,7 @@ struct Z_Construct_UFunction_UCommunicateComponent_GetCommunicateByIndex_Statics
 
 // ********** Begin Function GetCommunicateByIndex Property Definitions ****************************
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UCommunicateComponent_GetCommunicateByIndex_Statics::NewProp_index = { "index", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CommunicateComponent_eventGetCommunicateByIndex_Parms, index), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UCommunicateComponent_GetCommunicateByIndex_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CommunicateComponent_eventGetCommunicateByIndex_Parms, ReturnValue), Z_Construct_UScriptStruct_FCommunicateTableRow, METADATA_PARAMS(0, nullptr) }; // 3510658035
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UCommunicateComponent_GetCommunicateByIndex_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CommunicateComponent_eventGetCommunicateByIndex_Parms, ReturnValue), Z_Construct_UScriptStruct_FCommunicateTableRow, METADATA_PARAMS(0, nullptr) }; // 24681567
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UCommunicateComponent_GetCommunicateByIndex_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UCommunicateComponent_GetCommunicateByIndex_Statics::NewProp_index,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UCommunicateComponent_GetCommunicateByIndex_Statics::NewProp_ReturnValue,
@@ -558,8 +578,8 @@ struct Z_Construct_UClass_UCommunicateComponent_Statics
 	};
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UCommunicateComponent_GetCommunicate, "GetCommunicate" }, // 2339862415
-		{ &Z_Construct_UFunction_UCommunicateComponent_GetCommunicateByIndex, "GetCommunicateByIndex" }, // 3885689497
+		{ &Z_Construct_UFunction_UCommunicateComponent_GetCommunicate, "GetCommunicate" }, // 385670567
+		{ &Z_Construct_UFunction_UCommunicateComponent_GetCommunicateByIndex, "GetCommunicateByIndex" }, // 736697943
 		{ &Z_Construct_UFunction_UCommunicateComponent_NextCommunicate, "NextCommunicate" }, // 933000265
 		{ &Z_Construct_UFunction_UCommunicateComponent_UpdateCommunicateCache, "UpdateCommunicateCache" }, // 126597001
 		{ &Z_Construct_UFunction_UCommunicateComponent_UseSelect, "UseSelect" }, // 3994553582
@@ -573,10 +593,10 @@ struct Z_Construct_UClass_UCommunicateComponent_Statics
 
 // ********** Begin Class UCommunicateComponent Property Definitions *******************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCommunicateComponent_Statics::NewProp_DataTable = { "DataTable", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCommunicateComponent, DataTable), Z_Construct_UClass_UDataTable_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DataTable_MetaData), NewProp_DataTable_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UCommunicateComponent_Statics::NewProp_CommunicateCache_Inner = { "CommunicateCache", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FCommunicateTableRow, METADATA_PARAMS(0, nullptr) }; // 3510658035
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UCommunicateComponent_Statics::NewProp_CommunicateCache = { "CommunicateCache", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCommunicateComponent, CommunicateCache), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CommunicateCache_MetaData), NewProp_CommunicateCache_MetaData) }; // 3510658035
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UCommunicateComponent_Statics::NewProp_SelectCommunicateCache_Inner = { "SelectCommunicateCache", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FCommunicateTableRow, METADATA_PARAMS(0, nullptr) }; // 3510658035
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UCommunicateComponent_Statics::NewProp_SelectCommunicateCache = { "SelectCommunicateCache", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCommunicateComponent, SelectCommunicateCache), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SelectCommunicateCache_MetaData), NewProp_SelectCommunicateCache_MetaData) }; // 3510658035
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UCommunicateComponent_Statics::NewProp_CommunicateCache_Inner = { "CommunicateCache", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FCommunicateTableRow, METADATA_PARAMS(0, nullptr) }; // 24681567
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UCommunicateComponent_Statics::NewProp_CommunicateCache = { "CommunicateCache", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCommunicateComponent, CommunicateCache), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CommunicateCache_MetaData), NewProp_CommunicateCache_MetaData) }; // 24681567
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UCommunicateComponent_Statics::NewProp_SelectCommunicateCache_Inner = { "SelectCommunicateCache", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FCommunicateTableRow, METADATA_PARAMS(0, nullptr) }; // 24681567
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UCommunicateComponent_Statics::NewProp_SelectCommunicateCache = { "SelectCommunicateCache", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCommunicateComponent, SelectCommunicateCache), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SelectCommunicateCache_MetaData), NewProp_SelectCommunicateCache_MetaData) }; // 24681567
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UCommunicateComponent_Statics::NewProp_SelectIndex = { "SelectIndex", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCommunicateComponent, SelectIndex), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SelectIndex_MetaData), NewProp_SelectIndex_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UCommunicateComponent_Statics::NewProp_CommunicateIndex = { "CommunicateIndex", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCommunicateComponent, CommunicateIndex), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CommunicateIndex_MetaData), NewProp_CommunicateIndex_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCommunicateComponent_Statics::PropPointers[] = {
@@ -632,13 +652,13 @@ struct Z_CompiledInDeferFile_FID_test_CommunicatePlugins_CommunicatePlugins_Host
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
 		{ FSelectCommunicateTableRow::StaticStruct, Z_Construct_UScriptStruct_FSelectCommunicateTableRow_Statics::NewStructOps, TEXT("SelectCommunicateTableRow"),&Z_Registration_Info_UScriptStruct_FSelectCommunicateTableRow, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSelectCommunicateTableRow), 3734037076U) },
-		{ FCommunicateTableRow::StaticStruct, Z_Construct_UScriptStruct_FCommunicateTableRow_Statics::NewStructOps, TEXT("CommunicateTableRow"),&Z_Registration_Info_UScriptStruct_FCommunicateTableRow, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FCommunicateTableRow), 3510658035U) },
+		{ FCommunicateTableRow::StaticStruct, Z_Construct_UScriptStruct_FCommunicateTableRow_Statics::NewStructOps, TEXT("CommunicateTableRow"),&Z_Registration_Info_UScriptStruct_FCommunicateTableRow, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FCommunicateTableRow), 24681567U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UCommunicateComponent, UCommunicateComponent::StaticClass, TEXT("UCommunicateComponent"), &Z_Registration_Info_UClass_UCommunicateComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCommunicateComponent), 534737246U) },
+		{ Z_Construct_UClass_UCommunicateComponent, UCommunicateComponent::StaticClass, TEXT("UCommunicateComponent"), &Z_Registration_Info_UClass_UCommunicateComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCommunicateComponent), 764556726U) },
 	};
 }; // Z_CompiledInDeferFile_FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h__Script_CommunicatePlugins_Statics 
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h__Script_CommunicatePlugins_1317367205{
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h__Script_CommunicatePlugins_24734378{
 	TEXT("/Script/CommunicatePlugins"),
 	Z_CompiledInDeferFile_FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h__Script_CommunicatePlugins_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h__Script_CommunicatePlugins_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h__Script_CommunicatePlugins_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h__Script_CommunicatePlugins_Statics::ScriptStructInfo),

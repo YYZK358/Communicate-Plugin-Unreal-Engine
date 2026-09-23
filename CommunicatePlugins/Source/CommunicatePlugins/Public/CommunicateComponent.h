@@ -4,8 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "Engine/DataTable.h"
+#include "LevelSequence.h"
 #include "Components/ActorComponent.h"
 #include "CommunicateComponent.generated.h"
+
+
+class ULevelSequence;
 
 USTRUCT(Blueprintable)
 struct FSelectCommunicateTableRow : public FTableRowBase
@@ -32,6 +36,15 @@ struct FCommunicateTableRow : public FTableRowBase
 	//对话内容
 	UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="CommunicatePlugins")
 	FText ContentText;
+	
+	//对话音频
+	UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="CommunicatePlugins")
+	USoundBase *Sound;
+	
+	//过场动画
+	UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="CommunicatePlugins")
+	TSoftObjectPtr<ULevelSequence> Sequence;
+	
 	//是否包含选择
 	UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="CommunicatePlugins")
 	bool HaveSelect;

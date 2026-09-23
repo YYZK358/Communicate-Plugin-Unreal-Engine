@@ -19,7 +19,7 @@ struct FCommunicateTableRow;
 
 // ********** Begin ScriptStruct FSelectCommunicateTableRow ****************************************
 struct Z_Construct_UScriptStruct_FSelectCommunicateTableRow_Statics;
-#define FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h_13_GENERATED_BODY \
+#define FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h_17_GENERATED_BODY \
 	friend struct ::Z_Construct_UScriptStruct_FSelectCommunicateTableRow_Statics; \
 	COMMUNICATEPLUGINS_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -30,7 +30,7 @@ struct FSelectCommunicateTableRow;
 
 // ********** Begin ScriptStruct FCommunicateTableRow **********************************************
 struct Z_Construct_UScriptStruct_FCommunicateTableRow_Statics;
-#define FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h_28_GENERATED_BODY \
+#define FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h_32_GENERATED_BODY \
 	friend struct ::Z_Construct_UScriptStruct_FCommunicateTableRow_Statics; \
 	COMMUNICATEPLUGINS_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -40,7 +40,7 @@ struct FCommunicateTableRow;
 // ********** End ScriptStruct FCommunicateTableRow ************************************************
 
 // ********** Begin Class UCommunicateComponent ****************************************************
-#define FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h_51_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h_64_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execUseSelect); \
 	DECLARE_FUNCTION(execUpdateCommunicateCache); \
 	DECLARE_FUNCTION(execGetCommunicateByIndex); \
@@ -51,7 +51,7 @@ struct FCommunicateTableRow;
 struct Z_Construct_UClass_UCommunicateComponent_Statics;
 COMMUNICATEPLUGINS_API UClass* Z_Construct_UClass_UCommunicateComponent_NoRegister();
 
-#define FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h_51_INCLASS_NO_PURE_DECLS \
+#define FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h_64_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCommunicateComponent(); \
 	friend struct ::Z_Construct_UClass_UCommunicateComponent_Statics; \
@@ -62,7 +62,7 @@ public: \
 	DECLARE_SERIALIZER(UCommunicateComponent)
 
 
-#define FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h_51_ENHANCED_CONSTRUCTORS \
+#define FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h_64_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UCommunicateComponent(UCommunicateComponent&&) = delete; \
 	UCommunicateComponent(const UCommunicateComponent&) = delete; \
@@ -72,13 +72,13 @@ public: \
 	NO_API virtual ~UCommunicateComponent();
 
 
-#define FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h_48_PROLOG
-#define FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h_51_GENERATED_BODY \
+#define FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h_61_PROLOG
+#define FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h_64_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h_51_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h_51_INCLASS_NO_PURE_DECLS \
-	FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h_51_ENHANCED_CONSTRUCTORS \
+	FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h_64_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h_64_INCLASS_NO_PURE_DECLS \
+	FID_test_CommunicatePlugins_CommunicatePlugins_HostProject_Plugins_CommunicatePlugins_Source_CommunicatePlugins_Public_CommunicateComponent_h_64_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

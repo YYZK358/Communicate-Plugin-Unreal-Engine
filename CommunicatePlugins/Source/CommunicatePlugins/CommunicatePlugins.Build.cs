@@ -25,7 +25,7 @@ public class CommunicatePlugins : ModuleRules
 		PublicDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"Core",
+				"Core", "LevelSequence",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);

@@ -3,7 +3,7 @@
 
 #include "CommunicateComponent.h"
 
-
+ 
 
 // Sets default values for this component's properties
 UCommunicateComponent::UCommunicateComponent()
